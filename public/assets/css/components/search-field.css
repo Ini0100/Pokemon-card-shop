@@ -1,0 +1,30 @@
+/* Search field with a leading icon (used in the site header).
+   Its width is decided by the parent layout, not here. */
+
+.header-search {
+    position: relative;
+}
+
+.header-search .icon {
+    position: absolute;
+    left: var(--space-3);
+    top: 50%;
+    translate: 0 -50%;
+    color: var(--color-text-muted);
+    pointer-events: none;
+}
+
+.header-search input {
+    width: 100%;
+    padding: 0.6rem var(--space-4) 0.6rem 2.6rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-full);
+    background: var(--color-surface-muted);
+    transition: border-color var(--duration-fast), background var(--duration-fast);
+}
+
+.header-search input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: var(--color-surface);
+}

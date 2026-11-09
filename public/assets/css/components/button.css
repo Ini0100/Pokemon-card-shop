@@ -1,0 +1,118 @@
+.button {
+    --button-bg: var(--color-surface);
+    --button-fg: var(--color-text);
+    --button-border: var(--color-border-strong);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: 0.6rem 1.1rem;
+    border: 1px solid var(--button-border);
+    border-radius: var(--radius-full);
+    background: var(--button-bg);
+    color: var(--button-fg);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    transition:
+        background var(--duration-fast),
+        border-color var(--duration-fast),
+        color var(--duration-fast),
+        transform var(--duration-fast) var(--ease-out),
+        box-shadow var(--duration-fast);
+}
+
+.button:hover {
+    color: var(--button-fg);
+    border-color: var(--color-text-muted);
+}
+
+.button:active {
+    transform: translateY(1px);
+}
+
+.button:disabled,
+.button[aria-disabled="true"] {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Variants */
+
+.button--primary {
+    --button-bg: var(--color-primary);
+    --button-fg: var(--color-on-primary);
+    --button-border: var(--color-primary);
+}
+
+.button--primary:hover {
+    --button-bg: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+    box-shadow: 0 6px 18px rgb(70 67 226 / 0.3);
+}
+
+.button--accent {
+    --button-bg: var(--color-accent);
+    --button-fg: var(--color-on-accent);
+    --button-border: var(--color-accent);
+}
+
+.button--accent:hover {
+    --button-bg: var(--accent-400);
+    border-color: var(--accent-400);
+    box-shadow: 0 6px 22px rgb(247 194 24 / 0.4);
+}
+
+/* Translucent button for dark/gradient backgrounds */
+.button--glass {
+    --button-bg: rgb(255 255 255 / 0.12);
+    --button-fg: #fff;
+    --button-border: rgb(255 255 255 / 0.3);
+    backdrop-filter: blur(6px);
+}
+
+.button--glass:hover {
+    --button-bg: rgb(255 255 255 / 0.2);
+    border-color: rgb(255 255 255 / 0.5);
+}
+
+.button--ghost {
+    --button-bg: transparent;
+    --button-border: transparent;
+}
+
+.button--ghost:hover {
+    --button-bg: var(--color-surface-muted);
+    border-color: transparent;
+}
+
+.button--danger {
+    --button-fg: var(--color-danger);
+    --button-border: color-mix(in srgb, var(--color-danger) 40%, transparent);
+}
+
+.button--danger:hover {
+    --button-bg: var(--color-danger);
+    --button-fg: #fff;
+    border-color: var(--color-danger);
+}
+
+/* Sizes */
+
+.button--small {
+    padding: 0.35rem 0.8rem;
+    font-size: var(--text-xs);
+}
+
+.button--large {
+    padding: 0.85rem 1.5rem;
+    font-size: var(--text-base);
+}
+
+.button--block {
+    width: 100%;
+}

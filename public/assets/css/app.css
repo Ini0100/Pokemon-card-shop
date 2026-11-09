@@ -1,0 +1,45 @@
+/* ==========================================================================
+   TCG Market — stylesheet entry point
+
+   Styles are split into modules and grouped in cascade layers. Layer order,
+   not file order or selector specificity, decides which rules win:
+
+     reset < base < layout < components < pages < utilities
+   ========================================================================== */
+
+@layer reset, base, layout, components, pages, utilities;
+
+/* Base: design tokens, normalisation and typography */
+@import url("base/tokens.css") layer(base);
+@import url("base/reset.css") layer(reset);
+@import url("base/typography.css") layer(base);
+
+/* Layout: page skeleton */
+@import url("layout/container.css") layer(layout);
+@import url("layout/header.css") layer(layout);
+@import url("layout/footer.css") layer(layout);
+
+/* Components: reusable UI pieces */
+@import url("components/button.css") layer(components);
+@import url("components/form.css") layer(components);
+@import url("components/search-field.css") layer(components);
+@import url("components/card.css") layer(components);
+@import url("components/alert.css") layer(components);
+@import url("components/tag.css") layer(components);
+@import url("components/table.css") layer(components);
+@import url("components/summary.css") layer(components);
+@import url("components/empty-state.css") layer(components);
+@import url("components/pagination.css") layer(components);
+
+/* Pages: styles specific to one screen */
+@import url("pages/home.css") layer(pages);
+@import url("pages/catalog.css") layer(pages);
+@import url("pages/product.css") layer(pages);
+@import url("pages/cart.css") layer(pages);
+@import url("pages/auth.css") layer(pages);
+@import url("pages/album.css") layer(pages);
+@import url("pages/admin.css") layer(pages);
+@import url("pages/error.css") layer(pages);
+
+/* Utilities: single-purpose helpers, always win */
+@import url("utilities.css") layer(utilities);

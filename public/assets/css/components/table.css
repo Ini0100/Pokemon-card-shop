@@ -1,0 +1,76 @@
+.table-wrapper {
+    overflow-x: auto;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+}
+
+/* Tables nested inside a card don't need a second frame */
+.card .table-wrapper {
+    border: 0;
+    border-radius: 0;
+    margin-inline: calc(var(--space-5) * -1);
+}
+
+.table {
+    width: 100%;
+    font-size: var(--text-sm);
+}
+
+.table th,
+.table td {
+    padding: var(--space-3) var(--space-4);
+    border-bottom: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table th {
+    background: var(--color-surface-muted);
+    color: var(--color-text-muted);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.table tbody tr {
+    transition: background var(--duration-fast);
+}
+
+.table tbody tr:hover {
+    background: color-mix(in srgb, var(--color-surface-muted) 50%, transparent);
+}
+
+.table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.table :where(th, td).text-right {
+    text-align: right;
+}
+
+.table-product {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.table-product img {
+    width: 44px;
+    height: 56px;
+    object-fit: contain;
+}
+
+.table-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-2);
+}
+
+.table-actions form {
+    display: contents;
+}

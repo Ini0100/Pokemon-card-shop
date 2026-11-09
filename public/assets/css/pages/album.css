@@ -1,0 +1,85 @@
+.album-section {
+    margin-top: var(--space-7);
+}
+
+.album-section > h2 {
+    margin-bottom: var(--space-4);
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: var(--space-4);
+}
+
+.album-item {
+    position: relative;
+    display: grid;
+    gap: var(--space-2);
+    align-content: start;
+    padding: var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    text-align: center;
+    transition: transform var(--duration-base) var(--ease-out), box-shadow var(--duration-base);
+}
+
+.album-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.album-item img {
+    aspect-ratio: 3 / 4;
+    width: 100%;
+    object-fit: contain;
+}
+
+.album-item figcaption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+.album-item .tag {
+    justify-self: center;
+}
+
+/* Booster opening reveal ------------------------------------------------- */
+
+.reveal {
+    background: var(--gradient-hero);
+    border: 0;
+    color: var(--color-text-inverse);
+    text-align: center;
+}
+
+.reveal h2 {
+    font-size: var(--text-2xl);
+}
+
+.reveal .album-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+    justify-content: center;
+}
+
+.album-item--new {
+    border-color: rgb(255 255 255 / 0.25);
+    background: rgb(255 255 255 / 0.1);
+    color: var(--color-text-inverse);
+    animation: card-flip 700ms var(--ease-out) both;
+}
+
+.album-item--new:nth-child(2) { animation-delay: 150ms; }
+.album-item--new:nth-child(3) { animation-delay: 300ms; }
+
+@keyframes card-flip {
+    from {
+        opacity: 0;
+        transform: perspective(800px) rotateY(90deg) translateY(20px);
+    }
+}

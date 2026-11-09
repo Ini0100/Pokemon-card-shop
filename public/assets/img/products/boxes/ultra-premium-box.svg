@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Caja Ultra Premium para cartas">
+  <defs>
+    <linearGradient id="front" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a2466"/>
+      <stop offset="1" stop-color="#120f3a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b8860b"/>
+      <stop offset="0.5" stop-color="#ffe08a"/>
+      <stop offset="1" stop-color="#b8860b"/>
+    </linearGradient>
+    <linearGradient id="foil" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0.3" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="0.22"/>
+      <stop offset="0.7" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="225" cy="415" rx="165" ry="20" fill="#000" opacity="0.18"/>
+
+  <!-- Collector box: side, top, front -->
+  <polygon points="330,200 380,150 380,350 330,400" fill="#0b0926"/>
+  <polygon points="70,200 120,150 380,150 330,200" fill="#3d3590"/>
+  <rect x="70" y="200" width="260" height="200" rx="6" fill="url(#front)"/>
+
+  <!-- Gold ribbon across top and front, crossing on the left like a bow -->
+  <polygon points="105,200 155,150 183,150 133,200" fill="url(#gold)"/>
+  <rect x="105" y="200" width="28" height="200" fill="url(#gold)"/>
+  <polygon points="330,246 380,196 380,224 330,274" fill="#8a6408"/>
+  <rect x="70" y="246" width="260" height="28" fill="url(#gold)"/>
+
+  <!-- Seal where the ribbons cross -->
+  <circle cx="119" cy="260" r="34" fill="#120f3a" stroke="url(#gold)" stroke-width="6"/>
+  <path d="M119 236 l7 14 16 3 -12 11 3 16 -14 -8 -14 8 3 -16 -12 -11 16 -3 z" fill="#ffe08a"/>
+
+  <text x="238" y="330" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900"
+        font-size="18" letter-spacing="2" fill="#ffe08a">ULTRA</text>
+  <text x="238" y="356" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900"
+        font-size="18" letter-spacing="2" fill="#ffe08a">PREMIUM</text>
+
+  <rect x="70" y="200" width="260" height="200" rx="6" fill="url(#foil)"/>
+</svg>

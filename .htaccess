@@ -1,0 +1,6 @@
+# When the project folder itself is the web root (e.g. XAMPP htdocs), forward
+# every request to /public so source code, config and .env are never exposed.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

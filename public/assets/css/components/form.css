@@ -1,0 +1,137 @@
+.form {
+    display: grid;
+    gap: var(--space-4);
+}
+
+.form--grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-top: var(--space-4);
+}
+
+.field {
+    display: grid;
+    gap: var(--space-1);
+}
+
+.field--full {
+    grid-column: 1 / -1;
+}
+
+.field--action {
+    align-self: end;
+}
+
+.field > label,
+fieldset > legend {
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+.field small {
+    font-size: var(--text-xs);
+}
+
+.field-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+/* Text inputs, selects and textareas share one look */
+:where(
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="search"],
+    input[type="number"],
+    input[type="file"],
+    select,
+    textarea
+) {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+    transition: border-color var(--duration-fast), box-shadow var(--duration-fast);
+}
+
+:where(input, select, textarea):focus-visible {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: var(--focus-ring);
+}
+
+select {
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="file"] {
+    padding: 0.45rem;
+}
+
+input[type="file"]::file-selector-button {
+    margin-right: var(--space-3);
+    padding: 0.35rem 0.8rem;
+    border: 0;
+    border-radius: var(--radius-full);
+    background: var(--color-surface-muted);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--color-primary);
+}
+
+.has-error :where(input, select, textarea) {
+    border-color: var(--color-danger);
+}
+
+/* Toggle chips (checkbox styled as a pill) */
+
+.chip-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.chip {
+    position: relative;
+    cursor: pointer;
+}
+
+.chip input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.chip span {
+    display: inline-block;
+    padding: 0.3rem 0.75rem;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    transition: background var(--duration-fast), border-color var(--duration-fast), color var(--duration-fast);
+}
+
+.chip:hover span {
+    border-color: var(--color-primary);
+}
+
+.chip input:checked + span {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-on-primary);
+}
+
+.chip input:focus-visible + span {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+}

@@ -1,0 +1,198 @@
+/* Hero ------------------------------------------------------------------ */
+
+.hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    align-items: center;
+    gap: var(--space-6);
+    padding: var(--space-8) var(--space-7);
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background: var(--gradient-hero);
+    color: var(--color-text-inverse);
+    box-shadow: var(--shadow-lg);
+    isolation: isolate;
+}
+
+/* Subtle dotted texture */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: radial-gradient(rgb(255 255 255 / 0.12) 1px, transparent 1px);
+    background-size: 22px 22px;
+    mask-image: linear-gradient(90deg, #000 20%, transparent 80%);
+}
+
+.hero .eyebrow {
+    padding: var(--space-1) var(--space-3);
+    margin-bottom: var(--space-4);
+    border: 1px solid rgb(255 255 255 / 0.25);
+    border-radius: var(--radius-full);
+    background: rgb(255 255 255 / 0.08);
+    color: var(--accent-400);
+}
+
+.hero__title {
+    font-size: var(--text-3xl);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+}
+
+.hero__lead {
+    max-width: 46ch;
+    margin-top: var(--space-4);
+    font-size: var(--text-lg);
+    color: rgb(255 255 255 / 0.8);
+}
+
+.hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+}
+
+/* Three products fanned out like a hand of cards */
+.hero__art {
+    position: relative;
+    height: 340px;
+}
+
+.hero__art img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 46%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 30px rgb(0 0 0 / 0.45));
+    transform-origin: 50% 120%;
+    transition: transform var(--duration-base) var(--ease-out);
+    animation: hero-float 6s ease-in-out infinite;
+}
+
+.hero__art img:nth-child(1) { transform: translateX(-110%) rotate(-14deg); animation-delay: -2s; }
+.hero__art img:nth-child(2) { transform: translateX(-50%) translateY(-8%); z-index: 1; }
+.hero__art img:nth-child(3) { transform: translateX(10%) rotate(14deg); animation-delay: -4s; }
+
+@keyframes hero-float {
+    50% { translate: 0 -10px; }
+}
+
+/* Perks strip ------------------------------------------------------------ */
+
+.perks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+    margin-top: var(--space-5);
+}
+
+.perks li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    font-size: var(--text-sm);
+    font-weight: 500;
+}
+
+.perks .icon {
+    width: 36px;
+    height: 36px;
+    padding: var(--space-2);
+    border-radius: var(--radius-sm);
+    background: var(--color-primary-soft);
+    color: var(--color-primary);
+}
+
+/* Category tiles --------------------------------------------------------- */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-4);
+}
+
+.category-tile {
+    position: relative;
+    display: grid;
+    align-content: end;
+    min-height: 220px;
+    padding: var(--space-4);
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    isolation: isolate;
+    transition: transform var(--duration-base) var(--ease-out), box-shadow var(--duration-base), border-color var(--duration-base);
+}
+
+.category-tile img {
+    position: absolute;
+    top: var(--space-4);
+    right: -12%;
+    z-index: -1;
+    width: 72%;
+    max-height: 75%;
+    object-fit: contain;
+    rotate: 10deg;
+    filter: drop-shadow(0 10px 16px rgb(20 24 39 / 0.25));
+    transition: rotate var(--duration-base) var(--ease-out), scale var(--duration-base) var(--ease-out);
+}
+
+.category-tile::after {
+    content: "";
+    position: absolute;
+    inset: 40% 0 0;
+    z-index: -1;
+    background: linear-gradient(transparent, var(--color-surface) 70%);
+}
+
+.category-tile:hover {
+    color: var(--color-text);
+    transform: translateY(-4px);
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+}
+
+.category-tile:hover img {
+    rotate: 4deg;
+    scale: 1.06;
+}
+
+.category-tile__name {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 700;
+}
+
+.category-tile__count {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+/* Responsive ------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: var(--space-7) var(--space-5);
+    }
+
+    .hero__art {
+        height: 220px;
+    }
+
+    .perks {
+        grid-template-columns: 1fr;
+    }
+}

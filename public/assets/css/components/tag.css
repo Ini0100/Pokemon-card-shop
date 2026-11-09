@@ -1,0 +1,52 @@
+/* Small status labels: stock, order status, collection… */
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    padding: 0.15rem 0.6rem;
+    border-radius: var(--radius-full);
+    background: var(--color-surface-muted);
+    color: var(--color-text-muted);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.tag--success {
+    background: var(--color-success-soft);
+    color: var(--color-success);
+}
+
+.tag--warning {
+    background: var(--color-warning-soft);
+    color: var(--color-warning);
+}
+
+.tag--primary {
+    background: var(--color-primary-soft);
+    color: var(--color-primary);
+}
+
+/* Positioned over a product image */
+.tag--overlay {
+    position: absolute;
+    top: var(--space-3);
+    left: var(--space-3);
+    z-index: 1;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Quantity bubble (e.g. "×3" on album items) */
+.badge {
+    display: inline-grid;
+    place-items: center;
+    min-width: 1.6rem;
+    height: 1.6rem;
+    padding-inline: 0.35rem;
+    border-radius: var(--radius-full);
+    background: var(--color-text);
+    color: var(--color-bg);
+    font-size: var(--text-xs);
+    font-weight: 700;
+}

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 480" role="img" aria-label="Sobre EDICIÓN BÁSICA">
+  <defs>
+    <linearGradient id="foil" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f6bff"/>
+      <stop offset="1" stop-color="#0f2a8a"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0.25" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="0.35"/>
+      <stop offset="0.75" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="burst" cx="0.5" cy="0.45" r="0.5">
+      <stop offset="0" stop-color="#ffd23f" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffd23f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <path d="M0 14 L0 14 L6 6 L12 14 L18 6 L24 14 L30 6 L36 14 L42 6 L48 14 L54 6 L60 14 L66 6 L72 14 L78 6 L84 14 L90 6 L96 14 L102 6 L108 14 L114 6 L120 14 L126 6 L132 14 L138 6 L144 14 L150 6 L156 14 L162 6 L168 14 L174 6 L180 14 L186 6 L192 14 L198 6 L204 14 L210 6 L216 14 L222 6 L228 14 L234 6 L240 14 L246 6 L252 14 L258 6 L264 14 L270 6 L276 14 L282 6 L288 14 L294 6 L300 14 L300 6  L300 14 L300 466 L0 466 Z" fill="url(#foil)"/>
+  <rect x="0" y="6" width="300" height="34" fill="#000" opacity="0.18"/>
+  <rect x="0" y="440" width="300" height="34" fill="#000" opacity="0.18"/>
+  <circle cx="150" cy="215" r="135" fill="url(#burst)"/>
+  <g transform="translate(150 215)" fill="none" stroke="#fff" stroke-opacity="0.18" stroke-width="2">
+    <circle r="70"/><circle r="100"/><circle r="130"/>
+  </g>
+  <g transform="translate(150 212) rotate(-10)">
+    <rect x="-58" y="-80" width="116" height="160" rx="10" fill="#fff" opacity="0.25"/>
+    <g transform="rotate(14)">
+      <rect x="-58" y="-80" width="116" height="160" rx="10" fill="#fffbe8" stroke="#ffd23f" stroke-width="5"/>
+      <rect x="-46" y="-66" width="92" height="66" rx="4" fill="#2f6bff" opacity="0.85"/>
+      <path d="M0 -50 l7 15 16 2 -12 11 3 16 -14 -8 -14 8 3 -16 -12 -11 16 -2z" fill="#ffd23f"/>
+      <rect x="-46" y="10" width="92" height="7" rx="3" fill="#0f2a8a" opacity="0.5"/>
+      <rect x="-46" y="24" width="70" height="7" rx="3" fill="#0f2a8a" opacity="0.35"/>
+      <rect x="-46" y="38" width="80" height="7" rx="3" fill="#0f2a8a" opacity="0.35"/>
+    </g>
+  </g>
+  <text x="150" y="80" text-anchor="middle" font-family="Outfit, Arial Black, sans-serif" font-weight="800" font-size="15" letter-spacing="4" fill="#fff" opacity="0.85">TCG MARKET</text>
+  <text x="150" y="372" text-anchor="middle" font-family="Outfit, Arial Black, sans-serif" font-weight="800" font-size="30" fill="#fff" stroke="#0f2a8a" stroke-width="6" paint-order="stroke">EDICIÓN BÁSICA</text>
+  <text x="150" y="400" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="13" letter-spacing="2" fill="#fff" opacity="0.85">SOBRE · 3 CARTAS · 1999</text>
+  <rect x="0" y="14" width="300" height="452" fill="url(#sheen)"/>
+</svg>

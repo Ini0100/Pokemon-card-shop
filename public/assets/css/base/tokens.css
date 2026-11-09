@@ -1,0 +1,120 @@
+/* Design tokens: the single source of truth for colours, type, spacing and
+   motion. Components must use these variables instead of raw values. */
+
+:root {
+    color-scheme: light dark;
+
+    /* Typography */
+    --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-display: "Outfit", var(--font-sans);
+
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.375rem;
+    --text-2xl: 1.75rem;
+    --text-3xl: clamp(2rem, 1.4rem + 2.6vw, 3.25rem);
+
+    /* Spacing scale (4px base) */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-7: 3rem;
+    --space-8: 4.5rem;
+
+    /* Shape */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-full: 999px;
+
+    /* Brand palette */
+    --brand-500: #5b5bf6;
+    --brand-600: #4643e2;
+    --brand-700: #3a35c4;
+    --accent-400: #ffd23f;
+    --accent-500: #f7c218;
+
+    /* Surfaces & text (light theme) */
+    --color-bg: #f5f6fb;
+    --color-surface: #ffffff;
+    --color-surface-raised: #ffffff;
+    --color-surface-muted: #eef0f7;
+    --color-border: #e1e4ee;
+    --color-border-strong: #c9cedd;
+    --color-text: #151827;
+    --color-text-muted: #5d6378;
+    --color-text-inverse: #ffffff;
+
+    --color-primary: var(--brand-600);
+    --color-primary-hover: var(--brand-700);
+    --color-primary-soft: #ececff;
+    --color-on-primary: #ffffff;
+    --color-accent: var(--accent-500);
+    --color-on-accent: #1b1a10;
+
+    /* Feedback */
+    --color-success: #15803d;
+    --color-success-soft: #e6f6ec;
+    --color-warning: #b45309;
+    --color-warning-soft: #fdf3e2;
+    --color-danger: #d92d20;
+    --color-danger-soft: #fdecea;
+    --color-info: #0b6bcb;
+    --color-info-soft: #e7f1fc;
+
+    /* Elevation */
+    --shadow-sm: 0 1px 2px rgb(20 24 39 / 0.06);
+    --shadow-md: 0 2px 4px rgb(20 24 39 / 0.04), 0 8px 24px rgb(20 24 39 / 0.07);
+    --shadow-lg: 0 12px 40px rgb(20 24 39 / 0.14);
+    --focus-ring: 0 0 0 3px rgb(91 91 246 / 0.35);
+
+    /* Hero gradient */
+    --gradient-hero: radial-gradient(120% 140% at 0% 0%, #6d5cff 0%, #3a35c4 45%, #191654 100%);
+    --gradient-text: linear-gradient(90deg, var(--accent-400), #ff8a3d);
+
+    /* Motion */
+    --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+    --duration-fast: 150ms;
+    --duration-base: 250ms;
+
+    /* Layout */
+    --container-width: 1240px;
+    --header-height: 64px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: #0e1020;
+        --color-surface: #161a2e;
+        --color-surface-raised: #1c2138;
+        --color-surface-muted: #20253d;
+        --color-border: #2a3050;
+        --color-border-strong: #3a4268;
+        --color-text: #eceefa;
+        --color-text-muted: #a0a6c2;
+
+        --color-primary: #7c7cff;
+        --color-primary-hover: #9898ff;
+        --color-primary-soft: #262a52;
+        --color-on-primary: #0e1020;
+
+        --color-success: #4ade80;
+        --color-success-soft: #13301f;
+        --color-warning: #fbbf24;
+        --color-warning-soft: #33280f;
+        --color-danger: #f87171;
+        --color-danger-soft: #3a1717;
+        --color-info: #60a5fa;
+        --color-info-soft: #132a45;
+
+        --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+        --shadow-md: 0 2px 4px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.35);
+        --shadow-lg: 0 12px 40px rgb(0 0 0 / 0.5);
+        --focus-ring: 0 0 0 3px rgb(124 124 255 / 0.45);
+    }
+}

@@ -1,0 +1,15 @@
+# Environment & dependencies
+.env
+/vendor/
+
+# User uploads (keep the folder and its access rules)
+/public/uploads/*
+!/public/uploads/.gitkeep
+!/public/uploads/.htaccess
+
+# Editors & OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db

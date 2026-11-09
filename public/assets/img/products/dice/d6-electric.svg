@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Dado de 6 caras de tipo Eléctrico">
+  <defs>
+    <linearGradient id="top" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff4b0"/>
+      <stop offset="1" stop-color="#ffd23f"/>
+    </linearGradient>
+    <linearGradient id="left" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7c218"/>
+      <stop offset="1" stop-color="#d99a06"/>
+    </linearGradient>
+    <linearGradient id="right" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0a800"/>
+      <stop offset="1" stop-color="#b37a00"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="200" cy="410" rx="120" ry="18" fill="#000" opacity="0.15"/>
+
+  <g stroke-linejoin="round" stroke-width="14">
+    <!-- Faces: top, left, right (isometric cube) -->
+    <polygon points="200,110 320,180 200,250 80,180" fill="url(#top)" stroke="#ffe680"/>
+    <polygon points="80,180 200,250 200,390 80,320" fill="url(#left)" stroke="#f0b90b"/>
+    <polygon points="200,250 320,180 320,320 200,390" fill="url(#right)" stroke="#c98d00"/>
+  </g>
+
+  <!-- Top face: lightning bolt (unit square mapped onto the face) -->
+  <g transform="matrix(1.2 -0.7 1.2 0.7 80 180)">
+    <path d="M60 14 L30 54 H48 L38 86 L72 42 H54 L64 14 Z" fill="#1b1a10" opacity="0.85"/>
+  </g>
+
+  <!-- Left face: three pips -->
+  <g transform="matrix(1.2 0.7 0 1.4 80 180)" fill="#1b1a10" opacity="0.8">
+    <circle cx="25" cy="25" r="9"/>
+    <circle cx="50" cy="50" r="9"/>
+    <circle cx="75" cy="75" r="9"/>
+  </g>
+
+  <!-- Right face: five pips -->
+  <g transform="matrix(1.2 -0.7 0 1.4 200 250)" fill="#1b1a10" opacity="0.75">
+    <circle cx="25" cy="25" r="9"/>
+    <circle cx="75" cy="25" r="9"/>
+    <circle cx="50" cy="50" r="9"/>
+    <circle cx="25" cy="75" r="9"/>
+    <circle cx="75" cy="75" r="9"/>
+  </g>
+
+  <!-- Highlight -->
+  <polygon points="200,128 296,184 266,202 170,146" fill="#fff" opacity="0.35"/>
+</svg>

@@ -1,0 +1,4 @@
+# Uploaded files are served as static content only — never executed.
+<FilesMatch "\.(php|phtml|phar|php\d)$">
+    Require all denied
+</FilesMatch>

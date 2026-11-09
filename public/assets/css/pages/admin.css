@@ -1,0 +1,32 @@
+.admin-section {
+    display: grid;
+    gap: var(--space-4);
+    margin-bottom: var(--space-7);
+}
+
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-4);
+    margin-bottom: var(--space-7);
+}
+
+.stat {
+    display: grid;
+    gap: var(--space-1);
+    padding: var(--space-5);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+}
+
+.stat__value {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+}
+
+.stat__label {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
